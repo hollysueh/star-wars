@@ -44,7 +44,7 @@ const Index = (props) => (
 
 //Fetch character data from SWAPI API
 Index.getInitialProps = async function() {
-  const res = await fetch('http://swapi.dev/api/people/?page=1') //fetch page 1 of Star Wars people (displays first 10 results)
+  const res = await fetch('https://swapi.dev/api/people/?page=1') //fetch page 1 of Star Wars people (displays first 10 results)
   const data = await res.json() //parse JSON data
 
   console.log(`Show data fetched. Count: ${data.count}`)

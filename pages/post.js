@@ -53,7 +53,7 @@ const Post = (props) => (
 //Fetch data from SWAPI API - use character ID passed from index.js
 Post.getInitialProps = async function (context) {
   const { id } = context.query //get character 'id' (character name)
-  const res = await fetch(`http://swapi.dev/api/people/?search=${id}`) //fetch specific character info
+  const res = await fetch(`https://swapi.dev/api/people/?search=${id}`) //fetch specific character info
   const data = await res.json() //parse JSON data
   const person = data.results[0] //narrow down data field to first 'results' field 
 
